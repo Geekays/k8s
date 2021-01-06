@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-qa
+  labels:
+    app: nginx
+    environment: qa
+spec:
+  containers:
+  - image: nginx
+    name: nginx

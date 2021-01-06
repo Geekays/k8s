@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+ kind: ReplicaSet
+ metadata:
+   name: webapp
+   labels:
+     app: App1
+     env: prod
+ spec:
+   replicas: 3
+   selector:
+     matchLabels:
+       app: App1
+   template:
+     metadata:
+       labels:
+         app: App1
+         env: prod
+     spec:
+       containers:
+       - name: webapp
+         image: simple-webapp
