@@ -1,0 +1,18 @@
+kind: ClusterRole
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: job-master
+rules:
+- apiGroups:
+  - batch
+  resources:
+  - cronjobs
+  verbs:
+  - create
+  - delete
+  - deletecollection
+  - get
+  - list
+  - patch
+  - update
+  - watch
